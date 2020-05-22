@@ -21,8 +21,10 @@ sass:
 title: Divyanshi Kamra
 description: "A free Jekyll theme for download"
 keywords: "Jekyll, theme, free, download, SEO, blog, web"
-url: "https://divyanshikamra.github.io/"
-baseurl: "/divyanshikamra.github.io/"
+
+url: https://divyanshikamra.github.io/
+baseurl: /divyanshikamra.github.io/
+
 
 google_analytics: UA-52446115-1
 repo: http://github.com/nandomoreirame/end2end
