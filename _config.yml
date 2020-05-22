@@ -1,0 +1,55 @@
+# Build settings
+permalink: /blog/:year/:title/
+markdown: kramdown
+highlighter: pygments
+plugins: [jekyll-paginate-v2]
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: "/page/:num/"
+
+comments: true
+
+source: source
+destination: _site
+sass:
+  sass_dir: _sass
+  style: compressed # expanded
+
+# SEO settings
+title: Divyanshi Kamra
+description: "A free Jekyll theme for download"
+keywords: "Jekyll, theme, free, download, SEO, blog, web"
+url: "https://divyanshikamra.github.io"
+baseurl: "divyanshikamra"
+
+google_analytics: UA-52446115-1
+repo: http://github.com/nandomoreirame/end2end
+disqus_shortname: "nandothemes"
+disqus_site_shortname: "nandothemes"
+
+# Author settings
+author:
+  name: Divyanshi Kamra
+  job: Undergrad student at IITB
+  bio: "Smily face, spirited soul and sharp-witted head, always looking for electrifying experiences and opportunities"
+  thumb: /images/author.jpg
+  blog1: /images/blog1.jpg
+  blog2: /images/blog2.jpg
+  blog3: /images/blog3.jpg
+  blog4: /images/blog4.jpg
+  email: divyanshi.kamra.1212@gmail.com
+  url: https://divyanshikamra.github.io
+  github: https://github.com/divyanshikamra
+  instagram: https://www.instagram.com/divyanshi.kamra
+  facebook: https://www.facebook.com/divyanshi.kamra.7/
+
+# navbar pages
+navbar:
+  - slug: about
+    title: About
+  - slug: blog
+    title: Blog
+
+exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]

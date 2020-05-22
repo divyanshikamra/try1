@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Divyanshi Kamra</title>
+    <description>A free Jekyll theme for download</description>
+    <link>http://localhost:4000divyanshikamra/</link>
+    <atom:link href="http://localhost:4000divyanshikamra/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 22 May 2020 15:12:07 +0530</pubDate>
+    <lastBuildDate>Fri, 22 May 2020 15:12:07 +0530</lastBuildDate>
+    <generator>Jekyll v3.6.3</generator>
+    
+      <item>
+        <title>Tech Update: China’s latest AI </title>
+        <description>&lt;h1&gt;China’s latest AI news anchor mimics human voices and gestures in 3D&lt;/h1&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;divyanshikamra/images/blog1.jpg&quot; alt=&quot;author blog1&quot; class=&quot;square&quot; width=&quot;900&quot; height=&quot;400&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The 3D anchor is modeled on Zhao Wanwei, a real-life reporter for the news agency. Her digital counterpart is brought to life by “multi-modal recognition and synthesis, facial recognition and animation and transfer learning,” according to Sogou.
+
+The company claims that this allows it to imitate human voices, facial expressions, lip movements, and mannerisms using only text inputs.The anchor is the latest in a growing gang of virtual presenters used by Xinhua. In 2018, the agency introduced a digital anchor called Qiu Hao, which used machine learning to simulate the voices, facial movements, and gestures of real broadcasters.&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;T&lt;strong&gt;he following year, Xinhua unveiled a Russian-speaking version, which was developed alongside ITAR-TASS, a Russian news agency. The avatar was launched on the 70th anniversary of diplomatic relations between China and Russia, which suggests there are political motivations for the work as well as promotional ones.&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;
+The latest anchor is the first to be rendered in 3D. Its initial assignment is reporting for Xinhua on the Two Sessions, an annual congress of the Chinese Communist Party that kicked off today.&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Soguo says that in the future, Xin Xiaowei will walk out of the studio to offer “a refreshing news broadcasting style under various scenarios.” As if we didn’t have enough reasons to stay indoors already.&lt;/strong&gt; &lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;“If we do it right, we might be able to evolve a form of work that taps into our uniquely human capabilities and restores our humanity. The ultimate paradox is that this technology may become a powerful catalyst that we need to reclaim our humanity.”
+ &lt;br /&gt; -John Hagel&lt;/p&gt;&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Thu, 21 May 2020 19:16:52 +0530</pubDate>
+        <link>http://localhost:4000divyanshikamra/blog/2020/tech-china-ai/</link>
+        <guid isPermaLink="true">http://localhost:4000divyanshikamra/blog/2020/tech-china-ai/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Code Explore: Computer Vision</title>
+        <description>&lt;h1&gt;Invisible Cloak using Open CV and Python&lt;/h1&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;divyanshikamra/images/blog2.jpg&quot; alt=&quot;author blog2&quot; class=&quot;square&quot; width=&quot;900&quot; height=&quot;400&quot; /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Have you ever seen Harry Potter’s Invisible Cloak; Was it wonderful? Have you ever wanted to wear that cloak? If Yes!! then in this post, we will build the same cloak which Harry Potter uses to become invisible. Yes, we are not building it in a real way but it is all about graphics trickery.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;
+In this post, we will learn how to create our own ‘Invisibility Cloak’ using simple computer vision techniques in OpenCV. Here we have written this code in Python because it provides exhaustive and sufficient library to build this program.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;
+Here, we will create this magical experience using an image processing technique called Color detection and segmentation. In order to run this code, you need an mp4 video named “video.mp4“. You must have a cloth of same color and no other color should be visible into that cloth. We are taking the red cloth. If you are taking some other cloth, the code will remain the same but with minute changes. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4&gt;Why Red? Green is my favorite?&lt;/h4&gt;
+&lt;p&gt;
+Sure, we could have used green, isn’t Red the magician’s color? Jokes aside, colors like green or blue will also work fine with a little bit of changes in code.
+This technique is opposite to the Green Screening. In green screening, we remove background but here we will remove the foreground frame. So let’s start our code.&lt;/p&gt;
+
+&lt;h2&gt;Algorithim&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Capture and store the background frame [ This will be done for some seconds ]&lt;/li&gt;
+  &lt;li&gt;  Detect the red colored cloth using color detection and segmentation algorithm.&lt;/li&gt;
+  &lt;li&gt;Segment out the red colored cloth by generating a mask. [ used in code ]&lt;/li&gt;
+  &lt;li&gt;Generate the final augmented output to create a magical effect. [ video.mp4 ] &lt;/li&gt;
+  &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Code&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;import cv2 
+import numpy as np 
+import time 
+
+print(cv2.__version__) 
+ 
+capture_video = cv2.VideoCapture(&quot;video.mp4&quot;) 
+	
+time.sleep(1) 
+count = 0
+background = 0
+
+for i in range(60): 
+	return_val, background = capture_video.read() 
+	if return_val == False : 
+		continue
+
+background = np.flip(background, axis = 1) 
+
+while (capture_video.isOpened()): 
+	return_val, img = capture_video.read() 
+	if not return_val : 
+		break
+	count = count + 1
+	img = np.flip(img, axis = 1) 
+
+	
+	hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) 
+
+	
+	lower_red = np.array([100, 40, 40])	 
+	upper_red = np.array([100, 255, 255]) 
+	mask1 = cv2.inRange(hsv, lower_red, upper_red) 
+
+	lower_red = np.array([155, 40, 40]) 
+	upper_red = np.array([180, 255, 255]) 
+	mask2 = cv2.inRange(hsv, lower_red, upper_red) 
+	
+	mask1 = mask1 + mask2 
+
+	mask1 = cv2.morphologyEx(mask1, cv2.MORPH_OPEN, np.ones((3, 3), 
+										np.uint8), iterations = 2) 
+	mask1 = cv2.dilate(mask1, np.ones((3, 3), np.uint8), iterations = 1) 
+	mask2 = cv2.bitwise_not(mask1) 
+
+	# Generating the final output 
+	res1 = cv2.bitwise_and(background, background, mask = mask1) 
+	res2 = cv2.bitwise_and(img, img, mask = mask2) 
+	final_output = cv2.addWeighted(res1, 1, res2, 1, 0) 
+
+	cv2.imshow(&quot;INVISIBLE MAN&quot;, final_output) 
+	k = cv2.waitKey(10) 
+	if k == 27: 
+		break
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check out &lt;a href=&quot;https://www.geeksforgeeks.org/invisible-cloak-using-opencv-python-project/&quot;&gt;GeeksforGeeks&lt;/a&gt; for more info.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 20 May 2020 19:16:52 +0530</pubDate>
+        <link>http://localhost:4000divyanshikamra/blog/2020/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4000divyanshikamra/blog/2020/welcome-to-jekyll/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Lifestyle &amp; Wellness: Handling the Pandemic</title>
+        <description>&lt;h1&gt;Befriend isolation in the challenging times of Covid-19&lt;/h1&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;divyanshikamra/images/blog3.jpg&quot; alt=&quot;author blog3&quot; class=&quot;square&quot; width=&quot;900&quot; height=&quot;400&quot; /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;“Don’t try to calm the storm. Calm yourself. The storm will pass.” ~Buddha&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h3&gt;Facts and how to turn this challenge into an opportunity&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;The year 2020 came with a challenge of unprecedented scale: Covid-19. We are often looking outside, seeking safety on the outside: in the government, authorities, medical establishments. However, rich or developing countries in recent months are facing similar issues in terms of medical challenges. First months of the year gradually brought changes in people’s lifestyle, work style, and the way we spend our free time. How the world will look when the pandemic ends is difficult to predict.  Current times are emphasizing more than ever the need to look inside, have a refuge inside, be able to rely on ourselves. If you can imagine you are on a personal retreat, having the chance to meditate and engage in self-reflection like never before, you are already winning.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3&gt;There is no separation&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;In this age, there is no us and them. The pandemic clearly shows how each individual affects the other. This is the time to look at how what happens to one person affects the next and the next in an interconnected world. This is the time for making simple decisions in the most informed possible way. Panic, overreacting, believing you are invincible are equally counterproductive. In my home country Romania I am seeing a lot of solidarity and fundraising campaigns in order to provide hospitals with masks, protection gear, medical devices, and possible treatment. Young people are mobilizing together to inform and support the elderly with daily errands. There are many good people around the world uniting their efforts to do good. Are you already thinking how you can contribute in your community?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3&gt;Learning to enjoy solitude&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Without doubt, solitude and isolation are becoming the norm all over the world. We can’t know yet for how long, so it’s better to befriend it. Let’s make social distancing neither panic nor selfishness. It’s an act of solidarity with those who are at most risk of death from the virus.
+
+Inevitably, all of us will need to face some fears. Use mindfulness and meditation daily to prepare for difficult times. Being alone stirs many experiences and opens new ways of being and feeling.
+
+Have you ever felt lost or unsatisfied even when you had everything? This might be a collective turning point that will lead to radical transformations. Use this time to define your goal and mission for when you are given a new start.&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 13 Nov 2015 00:49:43 +0530</pubDate>
+        <link>http://localhost:4000divyanshikamra/blog/2015/invisible_cloak/</link>
+        <guid isPermaLink="true">http://localhost:4000divyanshikamra/blog/2015/invisible_cloak/</guid>
+        
+        
+        <category>welcome</category>
+        
+      </item>
+    
+      <item>
+        <title>Code Explore: Getting started with ML</title>
+        <description>&lt;h1&gt;top 6 ML courses to get started&lt;/h1&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;divyanshikamra/images/blog4.jpg&quot; alt=&quot;author blog4&quot; class=&quot;square&quot; width=&quot;900&quot; height=&quot;400&quot; /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;“Don’t try to calm the storm. Calm yourself. The storm will pass.” ~Buddha&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;With strong roots in statistics, Machine Learning is becoming one of the most interesting and fast-paced computer science fields to work in. There’s an endless supply of industries and applications machine learning can be applied to to make them more efficient and intelligent.&lt;/p&gt;
+
+&lt;p&gt;Chat bots, spam filtering, ad serving, search engines, and fraud detection, are among just a few examples of how machine learning models underpin everyday life. Machine learning is what lets us find patterns and create mathematical models for things that would sometimes be impossible for humans to do.&lt;/p&gt;
+
+&lt;p&gt;Unlike data science courses, which contain topics like exploratory data analysis, statistics, communication, and visualization techniques, machine learning courses focus on teaching only the machine learning algorithms, how they work mathematically, and how to utilize them in a programming language.&lt;/p&gt;
+
+&lt;p&gt;Now, it’s time to get started. Here’s a TL;DR of the top five machine learning courses this year.
+Best 6 Machine Learning Courses &amp;amp; Certifications for 2020:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/learn/machine-learning?ranMID=40328&amp;amp;ranEAID=OyHlmBp2G0c&amp;amp;ranSiteID=OyHlmBp2G0c-gFKnHDJeon0rIoKcbaDbVQ&amp;amp;siteID=OyHlmBp2G0c-gFKnHDJeon0rIoKcbaDbVQ&amp;amp;utm_content=10&amp;amp;utm_medium=partners&amp;amp;utm_source=linkshare&amp;amp;utm_campaign=OyHlmBp2G0c&quot;&gt;Machine Learning — Coursera&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/specializations/deep-learning?ranMID=40328&amp;amp;ranEAID=OyHlmBp2G0c&amp;amp;ranSiteID=OyHlmBp2G0c-PgguXeULBvrBOahCB7ZANA&amp;amp;siteID=OyHlmBp2G0c-PgguXeULBvrBOahCB7ZANA&amp;amp;utm_content=10&amp;amp;utm_medium=partners&amp;amp;utm_source=linkshare&amp;amp;utm_campaign=OyHlmBp2G0c&quot;&gt;Deep Learning Specialization — Coursera&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/learn/machine-learning-with-python?ranMID=40328&amp;amp;ranEAID=OyHlmBp2G0c&amp;amp;ranSiteID=OyHlmBp2G0c-xDs9M._G97VS1rtTGrffPg&amp;amp;siteID=OyHlmBp2G0c-xDs9M._G97VS1rtTGrffPg&amp;amp;utm_content=2&amp;amp;utm_medium=partners&amp;amp;utm_source=linkshare&amp;amp;utm_campaign=OyHlmBp2G0c&quot;&gt;Machine Learning with Python — Coursera&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/specializations/aml?ranMID=40328&amp;amp;ranEAID=OyHlmBp2G0c&amp;amp;ranSiteID=OyHlmBp2G0c-srSQUB2M8qGLAv8WQy8XPg&amp;amp;siteID=OyHlmBp2G0c-srSQUB2M8qGLAv8WQy8XPg&amp;amp;utm_content=2&amp;amp;utm_medium=partners&amp;amp;utm_source=linkshare&amp;amp;utm_campaign=OyHlmBp2G0c&quot;&gt;Advanced Machine Learning Specialization — Coursera&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.edx.org/course/machine-learning?source=aw&amp;amp;awc=6798_1590097533_4df4dd1777a341622feb23c7a4da3c17&amp;amp;utm_source=aw&amp;amp;utm_medium=affiliate_partner&amp;amp;utm_content=text-link&amp;amp;utm_term=315645_LearnDataSci&quot;&gt;Machine Learning — EdX&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://course18.fast.ai/ml&quot;&gt;Introduction to Machine Learning for Coders — Fast.ai&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Thu, 12 Nov 2015 22:12:24 +0530</pubDate>
+        <link>http://localhost:4000divyanshikamra/blog/2015/top-ml-courses/</link>
+        <guid isPermaLink="true">http://localhost:4000divyanshikamra/blog/2015/top-ml-courses/</guid>
+        
+        <category>welcome</category>
+        
+        
+        <category>jekyll update</category>
+        
+      </item>
+    
+  </channel>
+</rss>
